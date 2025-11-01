@@ -10,7 +10,7 @@ version = input("¿Qué versión mínima de Python quieres usar?") or "3.8"
 usar_test = input("¿Quieres incluir tests automáticos? (S/n): ") or "s"
 steps_test = ''
 if usar_test.lower() == 's':
-    cmd_test = input("¿Comando para ejecutar tus tests? (por defecto: 'pytest'): ") or "pytest"
+    cmd_test = input("¿Comando para ejecutar tus tests?") or "pytest"
     steps_test = f"""
     - name: Ejecutar tests
       run: {cmd_test}"""
