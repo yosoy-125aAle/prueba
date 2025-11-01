@@ -7,13 +7,13 @@ language = "python"
 version = input("¿Qué versión mínima de Python quieres usar?") or "3.8"
 
 # TEST AUTOMATIZADOS
-#usar_test = input("¿Quieres incluir tests automáticos? (S/n): ") or "s"
-#steps_test = ''
-#if usar_test.lower() == 's':
- #   cmd_test = input("¿Comando para ejecutar tus tests?") or "pytest"
-  #  steps_test = f"""
-   # - name: Ejecutar tests
-    #  run: {cmd_test}"""
+usar_test = input("¿Quieres incluir tests automáticos? (S/n): ") or "s"
+steps_test = ''
+if usar_test.lower() == 's':
+    cmd_test = input("¿Comando para ejecutar tus tests?") or "pytest"
+    steps_test = f"""
+    - name: Ejecutar tests
+      run: {cmd_test}"""
 
 # ANALISIS ESTATICO
 usar_linter = input("¿Quieres análisis de código estático? (S/n): ") or "s"
